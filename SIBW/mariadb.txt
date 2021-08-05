@@ -1,0 +1,84 @@
+mysql -h 127.0.0.1 -P 3306 -u root -p
+
+CREATE TABLE eventos(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	titulo VARCHAR(100),
+	subtitulo VARCHAR(100),
+	resumen VARCHAR(5000),
+	img_link VARCHAR(100)
+);
+
+CREATE TABLE preview(
+	id INT AUTO_INCREMENT,
+	evento INT NOT NULL,
+	titulo VARCHAR(100) NOT NULL,
+	resumen VARCHAR(500) NOT NULL,
+	img_preview VARCHAR(100) NOT NULL,
+	PRIMARY KEY(id),
+	FOREIGN KEY(evento) REFERENCES eventos(id) ON DELETE CASCADE
+);
+
+CREATE TABLE comentarios(
+	id INT AUTO_INCREMENT,
+	evento INT NOT NULL,
+	fecha DATE NOT NULL,
+	usuario VARCHAR(50) NOT NULL,
+	comentario VARCHAR(500) NOT NULL,
+	PRIMARY KEY(id),
+	FOREIGN KEY (evento) REFERENCES eventos(id) ON DELETE CASCADE,
+	FOREIGN KEY (usuario) REFERENCES usuarios(usuario) ON DELETE CASCADE
+);
+
+INSERT INTO comentarios(evento, fecha, usuario, comentario)
+VALUES (1, SYSDATE(), 'Jose', 'Siempre nos quedará YouTube');
+
+INSERT INTO usuarios(usuario, correo, nombre, pass) VALUES ();
+
+CREATE TABLE palabrotas(
+	palabra VARCHAR(50) PRIMARY KEY
+);
+
+CREATE TABLE usuarios(
+	usuario VARCHAR(50) PRIMARY KEY,
+	pass VARCHAR(15) NOT NULL,
+	correo VARCHAR(50) NOT NULL,
+	nombre VARCHAR(50) NOT NULL,
+	tipo VARCHAR(50) NOT NULL DEFAULT 'registrado' CHECK(tipo IN('registrado', 'moderador','gestor','super'))
+);
+...HACER OPERACIONES CON LA BASE DE DATOS...
+
+INSERT INTO comentarios(fecha, nombre, correo, comentario)
+VALUES (SYSDATE(), 'Zerjillo', 'zerjillo@mail.com', 'Me parece la acción más correcta. El año que viene volveremos con más entusiasmo');
+2020-04-26 | Pedro Martinez | pedrito@correo.es | Es una pena que se cancele, yo ya había reservado hotel
+
+INSERT INTO eventos(titulo, subtitulo, resumen, img_link) 
+VALUES ('Google I/O 2020',
+'Cancelado Google I/O 2020, el gran evento anual de Google para desarrolladores, a causa del coronavirus',
+'Programado para los días 12-14 de mayo en Mountain View, 
+            la localidad de California donde Google tiene su sede central,
+            este evento es el que la compañía elige para dar a conocer la
+            mayor parte de sus novedades (durante una presentación pública 
+            que programa siempre el primer día del evento), y constituye 
+            una cita imprescindible para los desarrolladores y empresas que 
+            uso de las plataformas de la compañía del buscador.
+            <br>
+            En cualquier caso, de igual modo que ocurrió con el F8 de Facebook, 
+            la compañía tampoco se resigna a una mera anulación de sus planes, y 
+            anuncia ya que está estudiando maneras de reformular el Google I/O 
+            mediante la emisión de varias presentaciones y conferencias vía 
+            streaming (en el caso de Facebook declararon estar planteándose incluso 
+            combinar esas emisiones con varios eventos presenciales de ámbito local).
+            <br>
+            Gracias a GENBETA por la noticia (Artículo por Maurizio Pesce).
+            <br>
+            Más información en <a href="https://events.google.com/io/" target="_blank">la página oficial de Google I/O</a>',
+'google2020.jpg');
+
++----------+-------------+-------------------+------------------+------------+
+| usuario  | pass        | correo            | nombre           | tipo       |
++----------+-------------+-------------------+------------------+------------+
+| Antonio  | colombia123 | samba@yahoo.com   | Antonio Martinez | moderador  |
+| Jose     | balvin      | salsa@gmail.com   | Jose Osorio      | gestor     |
+| Miguel   | root        | miguel@correo.es  | Miguel Faraday   | super      |
+| Zerjillo | zerjillo    | zerjillo@mail.com | Sergio Turing    | registrado |
++----------+-------------+-------------------+------------------+------------+
