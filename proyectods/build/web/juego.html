@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="QuizzMe">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="juego.js"></script>
+    <title>QuizzMe</title>
+</head>
+<body ng-controller="controlador">
+    <h3 style="text-align: center">Id partida: {{id}}</h3>
+    <div id="pregunta">{{pregunta}}</div>
+    <button ng-click="opcion1()" id="respuesta1">{{respuesta1}}</button>
+    <button ng-click="opcion2()" id="respuesta2">{{respuesta2}}</button>
+    <button ng-click="opcion3()" id="respuesta3">{{respuesta3}}</button>
+    <button ng-click="opcion4()" id="respuesta4">{{respuesta4}}</button>
+    
+    <br>
+    <br>
+
+    <button ng-click="siguientePregunta()" id="aceptar">Enviar</button>
+</body>
+</html>

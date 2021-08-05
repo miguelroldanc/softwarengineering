@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="unir">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="unir.js"></script>
+    <title>QuizzMe</title>
+</head>
+<body ng-controller="controlador">
+    <div id="texto">
+        <p>Nombre de usuario <input type="text" ng-model="user"></p>
+        <p>Código de la sesión <input type="text" ng-model="id"></p>
+    </div>    
+    
+    <button ng-click="acceder()" id="aceptar">Unirse</button>
+</body>
+</html>

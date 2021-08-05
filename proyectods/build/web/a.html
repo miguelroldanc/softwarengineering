@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>Untitled</TITLE>
+<META NAME="GENERATOR" CONTENT="MAX's HTML Beauty++ 2004">
+</HEAD>
+
+<BODY>
+
+<script type="text/javascript" language="JavaScript">
+    // autor: Jallmalatesta
+    var datos = location.search;
+    datos = datos.substr(1,datos.length);
+    //hemos conseguido que datos = "id=1&nom=nombre1"
+    var arrVariables = datos.split ("&&");
+    // arrVariables = ["id=1", "nom=nombre1"]
+    var arrVar0 = arrVariables[0].split ("=&");
+    var arrVar1 = arrVariables[1].split ("=&");
+    // arrVar0 = ["id","1"]
+    // arrVar1 = ["nom","nombre1"]
+    var strgId = arrVar0[1];
+    var strgNom = arrVar1[1];
+    /////////////////////////////////////////////////
+    if (strgId == "1&"){
+    document.write ("<input type=\"button\" value=\"descargar noticia 1\""+" onclick=\"javascript:window.open('texto1.txt')>&");
+    }
+    if (strgId == "2&"){
+    document.write ("<input type=\"button\" value=\"descargar noticia 2\""+" onclick=\"javascript:window.open('texto2.txt')>&");
+    }
+</script>
+
+</BODY>
+</HTML>

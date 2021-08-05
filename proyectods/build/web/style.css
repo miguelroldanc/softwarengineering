@@ -1,0 +1,95 @@
+#opcion1{
+	background-color: rgb(28, 221, 195);
+	min-width: 50%;
+	min-height: 150px;
+	font-size: xx-large;
+	border:1%;
+	border-style: solid;
+	border-color: black;
+	padding: 5px 5px 5px 5px;
+	margin: 5% 25% 2% 25%;
+}
+#opcion2{
+	background-color: rgb(222, 233, 77);
+	min-width: 50%;
+	min-height: 150px;
+	font-size: xx-large;
+	border:1%;
+	border-style: solid;
+	border-color: black;
+	padding: 5px 5px 5px 5px;
+	margin: 5% 25% 2% 25%;
+}
+#aceptar{
+	min-width: 20%;
+	min-height: 30px;
+	padding: 5px 5px 5px 5px;
+	margin: 0% 40% 0% 40%;
+}
+#tema{
+	min-width: 10%;
+	min-height: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+#texto{
+	text-align: center;
+	margin-top: 20%;
+}
+#pregunta{
+	background-color: rgb(230, 230, 230);
+	min-width: 70%;
+	font-size: xx-large;
+	border:1%;
+	border-style: solid;
+	border-color: black;
+	padding: 5px 5px 5px 5px;
+	margin: 5% 15% 2% 15%;
+}
+#respuesta1{
+	background-color: rgb(255, 100, 100);
+	min-width: 50%;
+	min-height: 50px;
+	border:1%;
+	border-style: solid;
+	border-color: black;
+	padding: 5px 5px 5px 5px;
+	margin: 1% 25% 1% 25%;
+}
+#respuesta2{
+	background-color: rgb(100, 255, 255);
+	min-width: 50%;
+	min-height: 50px;
+	border:1%;
+	border-style: solid;
+	border-color: black;
+	padding: 5px 5px 5px 5px;
+	margin: 1% 25% 1% 25%;
+}
+#respuesta3{
+	background-color: rgb(255, 255, 100);
+	min-width: 50%;
+	min-height: 50px;
+	border:1%;
+	border-style: solid;
+	border-color: black;
+	padding: 5px 5px 5px 5px;
+	margin: 1% 25% 1% 25%;
+}
+#respuesta4{
+	background-color: rgb(100, 255, 100);
+	min-width: 50%;
+	min-height: 50px;
+	border:1%;
+	border-style: solid;
+	border-color: black;
+	padding: 5px 5px 5px 5px;
+	margin: 1% 25% 1% 25%;
+}
+#oculto{
+	visibility: hidden;
+	min-width: 20%;
+	min-height: 30px;
+	padding: 5px 5px 5px 5px;
+	margin: 0% 40% 0% 40%;
+}

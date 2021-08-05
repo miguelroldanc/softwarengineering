@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="trivial">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="trivial.js"></script>
+    <title>QuizzMe</title>
+</head>
+<body ng-controller="controlador">
+    <div id="texto">
+        <h2>Id de la partida: {{id}}</h2>
+
+        <h5>Temas</h5>
+        <button ng-click="seleccionar1()" id="tema">Geografía{{uno}}</button>
+        <button ng-click="seleccionar2()" id="tema">Historia{{dos}}</button>
+        <br> <br>
+        <button ng-click="seleccionar3()" id="tema">Arte{{tres}}</button>
+        <button ng-click="seleccionar4()" id="tema">Deportes{{cuatro}}</button>
+
+        <br>
+        <br>
+
+        <p>Número de preguntas [1-20] <input type="text" ng-model="numPreguntas"></p>
+    </div>
+
+    <br>
+    <br>
+
+    <button ng-click="aceptar()" id="aceptar">Crear partida</button>
+</body>
+</html>
